@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Images and Graphics</title>
+    </head>
+    <body>
+        <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/helloWorld.png" 
+            alt="Hello World!" 
+            width="50%" 
+            height="50%">        
+            
+            <!-- 
+            The srcset Attribute :
+            ======================
+            Allows you to specify multiple files to be used
+            based on either viewport width or image pixel width.
+
+            The sizes Attribute :
+            =====================
+            Lists which size image to use at which media query.
+            -->
+            <p>Resize the browser window to load different images.</p>
+            <picture>
+                <source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                <source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+                <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+            </picture> 
+
+            <!-- 
+            figure :
+            ========
+            For anything that appears as a figure, illustrating something.
+
+            figcaption :
+            ============
+            For demonstration of a concept which needs a caption.
+            -->
+            <figure>
+                <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg"
+                    alt="flowers" 
+                    width="10%" 
+                    height="10%">
+                <figcaption>Flowers</figcaption>
+            </figure> 
+    </body>
+</html>
