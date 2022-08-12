@@ -1,0 +1,72 @@
+/* CSS Selectors : Used to target HTML elements */
+
+/* Type Selector : Based on individual HTML elements and applied globally. */
+
+p { 
+    font-size: 20px 
+}
+
+/* 
+
+Class Selector : Based on Class attributes applied to any HTML element.
+
+Given the followintg HTML : 
+
+<p class="error">Oops!</p> 
+
+*/
+
+.error{
+    color: red;
+}
+
+
+/* 
+
+ID Selector : Based on ID attributes applied to any HTML element.
+
+Must be unique!
+
+Given the followintg HTML : 
+
+<div id="content">
+    Howdy, partner.
+</div>
+
+*/
+
+#content {
+    color: blue;
+}
+
+
+/* 
+Combinators : Explain the relationship between selectors.
+
+There are four different combinators in CSS (https://www.w3schools.com/css/css_combinators.asp):
+
+    Descendant selector (space)
+    Child selector (>)
+    Adjacent sibling selector (+)
+    General sibling selector (~)
+*/
+
+/*Descendant selector (space) : selects all <span> elements inside <div> elements*/
+div span {
+    background-color: yellow;
+}
+
+/*Child selector (>) : selects all <span> elements that are children of a <div> element*/
+div > span {
+    background-color: yellow;
+}
+
+/*Adjacent sibling selector (+) : selects the first <p> element that is placed immediately after <div> elements (same level)*/
+div + p {
+    background-color: yellow;
+}
+
+/*General sibling selector (~) : Selects all <p> element after a <div> element (same level)*/
+div ~ p {
+    background-color: yellow;
+  }
