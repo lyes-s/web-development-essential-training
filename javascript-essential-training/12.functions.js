@@ -23,4 +23,8 @@ printHello(printHello.name);
 // Anonymous Function
 // Default return value is Undefined
 let show = () => console.log("I'm an Anonymous function !");
-show();
+show(); 
+
+// Arrow Function
+const add = (a, b) => a + b;
+console.log(add(1, 3));

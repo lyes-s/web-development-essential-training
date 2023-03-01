@@ -16,7 +16,15 @@
 const book = {
     title: "1984",
     author: "George Orwell",
-    isAvailable: false
+    isAvailable: false,
+    
+    checkIn: function() {
+        this.isAvailable = true;
+    },
+
+    checkOut: function() {
+        this.isAvailable = false;
+    }
 };
 
 let bookJson = JSON.stringify(book, null, '\t');

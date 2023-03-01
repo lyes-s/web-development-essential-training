@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a relevant page title</title>
+    <script src="./15.events.js"></script>
+  </head>
+  
+  <!-- Use also onLoad() onLoadRedirect() methods--> 
+  <body onload="onTick()">   
+
+    <p id="dateInfo"></p>
+    
+    <!-- On Click Event --> 
+    <button onclick="onClick()">Click me</button>
+    <p id="demo"></p>
+    
+    <!-- On Focus Event --> 
+     Enter your name: <input type="text" onfocus="onFocus(this)" 
+                                         onmouseover="onMouseOver(this)" 
+                                         onmouseout="onMouseOut(this)">
+    <br/>
+
+    <p onmouseup="onMouseUp(this)" onmousedown="onMouseDown(this)">Thia is a paragraph</p>
+
+    <select onchange="onChange(this)">
+        <option value="">Select a color</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+    </select>
+
+    <br/>
+
+    <select onchange="onChangeBackgroundImage(this)">
+      <option value="">Select an Image</option>
+      <option value="images/maven.jpg">Maven</option>
+      <option value="images/xslt.jpg">XSLT</option>
+    </select>  
+
+    <br/>
+    
+    <input type="text" onkeypress="onKeyPress(this)">
+
+    <form onsubmit="onSubmit()">
+      <input type="submit" />
+    </form>
+
+    <input type="button" value="Click Me" id="clickMeButton" />
+
+
+
+    <div id="parentDiv">
+      <p id="childP1">Hola!</p>
+      <p id="childP2">Hello!</p>
+    </div>
+    <input type="button" value="remove" onclick="removeOnClick()" />
+
+    <!-- Form validation simple -->
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Name: <input type="text" name="fname">
+      <input type="submit" value="Submit">
+      <span id="span"></span>
+      </form> 
+
+    <!-- Check Boxes Validation simple -->  
+    <form name="checboxFormText" action="/action_page.php" onsubmit="return validateChecBoxesForm()" method="post">
+      <input type="checkbox" name="yes" id="yes" value="yes"> Yes
+      <input type="checkbox" name="no" id="no" value="no"> No
+      <input type="submit" value="submit" />
+      <span id="checkboxeserrorspan"></span>
+    </form>
+
+    <!-- Check Radio Button Validation simple -->  
+    <form name="checkRadioForm" action="/action_page.php" onsubmit="return validateRadioForm()" method="post">
+      <input type="radio" name="radio" id="yes" value="yes"> Yes
+      <input type="radio" name="radio" id="no" value="no" checked="checked"> No
+      <input type="submit" value="submit" />
+      <span id="checkradioserrorspan"></span>
+    </form>
+
+    <!-- Regex Validation -->
+    <form name="regexValidationForm" onsubmit="return regexValidation()">
+      First Name : <input type="text" name="firstname"> <br/>
+      Last Name : <input type="text" name="lastname"> <br/>
+      <input type="submit" value="Submit">
+      <span id="textValidationError"></span>
+    </form>
+
+
+  </body>
+</html>

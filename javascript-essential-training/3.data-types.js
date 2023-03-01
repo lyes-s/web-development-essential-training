@@ -17,9 +17,9 @@
  *                  
  */
 
-let number = new Number('1');
-console.log("Is 1 Instance of Number ?", number instanceof Number);
+let number = 1;
+console.log("Is 1 Instance of Number ?", new Number(number) instanceof Number);
 console.log("1 Is Type of ?", typeof number);
 let number2 = 0
-console.log("Is Number 1 equals to an empty String based on type coercion ? ", number2 == '');
-console.log("Is Number 1 equals to an empty String based on type respected ? ", number2 === '');
+console.log("Is Number-2 equals to an empty String based on type coercion ? ", number2 == '');
+console.log("Is Number-2 equals to an empty String based on type respected ? ", number2 === '');
