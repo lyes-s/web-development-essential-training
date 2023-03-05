@@ -1,0 +1,102 @@
+
+/* Font Family
+- Specifies the font for an element
+- Is a prioritized list of fonts
+- Includes a fallback font */
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Font Weight : Specifies the weight of a font */
+
+p {
+    font-weight: bold;
+}
+
+/* Font Style : Specifies the style of a font */
+
+p {
+    font-style: normal;
+}
+
+/*Font Size : Specifies the size of a font */
+
+p {
+    font-size: medium;
+}
+
+/* 
+
+The CSS Box Model: In CSS, the term "box model" is used when talking about design and layout. 
+
+Explanation of the different parts: (https://www.w3schools.com/css/css_boxmodel.asp)
+
+    Content - The content of the box, where text and images appear
+    Padding - Clears an area around the content. The padding is transparent
+    Border - A border that goes around the padding and content
+    Margin - Clears an area outside the border. The margin is transparent
+
+*/
+.story {
+    width: 200px;
+    /* Width 240px + padding left 20px + padding right 20px */
+    /* Reminder ->  box-sizing: border-box to keep 240px no matter what */
+    box-sizing: content-box;
+    padding: 20px 20px 20px 20px;
+    /*Short Notation with the 2px on each side */
+    border: 2px dashed;
+    margin: 20px;
+    /* Not Part Of CSS Box Model */
+    outline: 5px dashed pink;
+}
+
+/* 
+
+Border Styles :
+
+    border-style : none 
+    border-style : hidden 
+    
+    // Single Flat Line
+    border-style : solid
+    border-style : dotted
+    border-style : dashed 
+
+    border-style : double 
+    border-style : groove 
+    border-style : ridge 
+    border-style : inset 
+    border-style : ouset 
+
+*/
+.element {
+    width: 200px;
+    padding: 20px 20px 20px 20px;
+    border: 2px dashed; 
+}
+
+/*
+
+Background :
+
+    Individual Properties: 
+        background-attachment:
+        background-clip:
+        background-color:
+        background-image:
+        background-origin:
+        background-position:
+        background-repeat:
+        background-size:
+    
+    Shorthand Notation:
+        background: url(test.jpg) no-rapeat center
+
+*/
+.image {
+    background-image: url(start.jpg);
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: 200px;
+}
